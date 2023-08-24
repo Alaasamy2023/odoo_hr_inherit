@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record model="ir.ui.view" id="hr_employee_from_inherit">
+            <field name="name">Hr Employee Inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+             <field name="arch" type="xml">
+            <field name="gender" position="after">
+           <field name="military_certificate"/>
+
+            </field>
+            <field name="gender" position="attributes">
+<attribute name="required">True</attribute>
+            </field>
+            </field>
+        </record>
+
+
+
+
+
+
+      <record model="ir.ui.view" id="hr_employee_tree_inherit">
+            <field name="name">Hr Employee tree Inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+             <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+           <field name="gender"/>
+
+            </field>
+
+            </field>
+        </record>
+
+
+
+
+
+
+
+</odoo>
